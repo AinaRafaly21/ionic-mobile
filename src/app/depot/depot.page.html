@@ -1,0 +1,45 @@
+<ion-menu contentId="main-content">
+  <ion-list>
+    <ion-item>
+      <ion-label>ACCUEIL</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>SIMULER APPEL</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>ACHETER OFRRE</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>FAIRE DEPOT</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>MON COMPTE</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-menu>
+
+<ion-header>
+  <ion-item><a href="/accueil"> Retour </a> </ion-item>
+  <ion-toolbar>
+    <ion-title>Depot</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> FAIRE UN DEPOT</ion-card-title>
+    </ion-card-header>
+      <ion-card-content>
+        
+    <form #DepotForm="ngForm" class="form-wrap">
+        <ion-item>
+          <ion-input ngModel type="number" placeholder="Montant" name="montant"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)=deposer(DepotForm)>Deposer</ion-button>
+        </ion-item>  
+    </form>
+      </ion-card-content>
+  </ion-card>
+</ion-content>

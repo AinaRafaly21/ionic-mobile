@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-item (click)=logout()> Se déconnecter <ion-icon name="exit-outline"></ion-icon></ion-item>
+  <ion-toolbar>
+    <ion-title>Accueil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card href="/simulation">
+    <ion-card-header>
+      <ion-card-title><ion-icon name="call-outline"></ion-icon> SIMULATION </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card href="/achat-offre">
+    <ion-card-header>
+      <ion-card-title><ion-icon name="layers-outline"></ion-icon> ACHETER OFFRE</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card href="/depot">
+    <ion-card-header>
+      <ion-card-title><ion-icon name="create-outline"></ion-icon> FAIRE DEPOT MOBILE MONEY</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card href="/credit">
+    <ion-card-header>
+      <ion-card-title><ion-icon name="create-outline"></ion-icon> ACHETER CREDIT </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card [routerLink]="['/','compte',idUtilisateur]">
+    <ion-card-header>
+      <ion-card-title><ion-icon name="reorder-four-outline"></ion-icon> MON COMPTE</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

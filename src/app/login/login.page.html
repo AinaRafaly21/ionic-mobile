@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <form #LoginForm="ngForm" class="form-wrap">
+        <ion-item>
+          <ion-input ngModel type="text" name="numero" placeholder="phone number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input ngModel name="mot_de_passe" placeholder="password" type="password"></ion-input>
+        </ion-item>  
+        <ion-item>
+          <ion-button (click)="connexion(LoginForm)">Login</ion-button>
+        </ion-item>  
+      </form>     
+    </ion-card-content>
+  </ion-card>
+</ion-content>

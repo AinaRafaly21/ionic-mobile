@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-item><a href="/accueil"> Retour </a> </ion-item>
+  <ion-toolbar>
+    <ion-title>Details de l'offre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> {{ offre.nom_offre }} </ion-card-title>
+      <ion-label>Cette offre vous permet de bénéficier de :</ion-label>
+      <ion-label *ngFor="let details of (detailsOffre)">
+        {{ details.valeur_offre }} {{ details.type }}
+      </ion-label>
+      <ion-label>Prix : {{ offre.prix_offre }} AR</ion-label>
+    </ion-card-header>
+    <ion-label>Voulez vous vraiment acheter cette offre ?</ion-label>
+    <ion-item>
+      <ion-button (click)="acheter(1)">Acheter via credit</ion-button>
+      <ion-button (click)="acheter(2)">Acheter via mobile money</ion-button>
+      <ion-button href="/achat-offre">Retour</ion-button>
+    </ion-item>  
+  </ion-card>
+</ion-content>
